@@ -8,7 +8,7 @@ const Products = () => {
   const [products, setProducts] = useState([]);
 
   useEffect(() => {
-    fetch("products.json")
+    fetch("http://localhost:5000/products")
       .then((res) => res.json())
       .then((data) => setProducts(data));
   }, []);
@@ -26,7 +26,7 @@ const Products = () => {
       >
         More of Our Products
       </Typography>
-      <Typography
+      {/* <Typography
         variant="h4"
         sx={{
           mt: 5,
@@ -36,7 +36,7 @@ const Products = () => {
         }}
       >
         Top - Brands
-      </Typography>
+      </Typography> */}
       <Typography
         variant="h5"
         sx={{ mt: 5, mb: 5, fontSize: 24, color: "gray", fontWeight: "bold" }}

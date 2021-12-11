@@ -42,13 +42,16 @@ const Product = ({ product }) => {
           </Typography>
         </CardContent>
         <CardActions>
-          <Link className="w-full" to={`/purchase/${_id}`}>
+          <Link
+            style={{ textDecoration: "none" }}
+            className="w-full"
+            to={`/purchase/${_id}`}
+          >
             <Button
               variant="contained"
               style={{
                 backgroundColor: "#4a4e69",
                 width: "350px",
-                textDecoration: "none",
               }}
               // size="medium"
             >

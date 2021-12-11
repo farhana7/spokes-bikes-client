@@ -8,8 +8,11 @@ import Button from "@mui/material/Button";
 // import MenuIcon from "@mui/icons-material/Menu";
 import "./Header.css";
 import { NavLink } from "react-router-dom";
+import useAuth from "../../../hooks/useAuth";
 
 const Header = () => {
+  const { user, logOut } = useAuth();
+
   return (
     <Box sx={{ flexGrow: 1 }}>
       <AppBar
@@ -40,7 +43,7 @@ const Header = () => {
           >
             Spokes Bikes
           </Typography>
-          <NavLink to="/home">
+          <NavLink style={{ textDecoration: "none" }} to="/home">
             <Button
               sx={{
                 fontWeight: "bold",
@@ -50,12 +53,37 @@ const Header = () => {
               Home
             </Button>
           </NavLink>
+          <NavLink to="/addAProduct">
+            <Button>Add A Product</Button>
+          </NavLink>
 
-          <Button color="inherit">Login</Button>
+          {user?.email ? (
+            <Button onClick={logOut} color="inherit">
+              Logout
+            </Button>
+          ) : (
+            <NavLink
+              style={{ textDecoration: "none", color: "white" }}
+              to="/login"
+            >
+              <Button color="inherit">Login</Button>
+            </NavLink>
+          )}
+          <>
+            Signed in as:
+            <a
+              style={{ textDecoration: "none", color: "white" }}
+              href="/#login"
+            >
+              {user?.displayName}
+            </a>
+          </>
 
-          <Button variant="contained" style={{ backgroundColor: "#2a9d8f" }}>
-            Explore
-          </Button>
+          <NavLink style={{ textDecoration: "none" }} to="/products">
+            <Button variant="contained" style={{ backgroundColor: "#2a9d8f" }}>
+              Explore
+            </Button>
+          </NavLink>
         </Toolbar>
       </AppBar>
     </Box>

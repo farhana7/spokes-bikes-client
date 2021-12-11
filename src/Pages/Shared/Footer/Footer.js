@@ -7,7 +7,7 @@ const Footer = () => {
     <Box>
       <Typography
         variant="h6"
-        style={{ backgroundColor: "black" }}
+        style={{ backgroundColor: "#333533" }}
         sx={{ mt: 5, fontSize: 17, color: "burlywood" }}
       >
         <br />

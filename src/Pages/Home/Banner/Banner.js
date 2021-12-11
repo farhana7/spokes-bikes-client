@@ -2,7 +2,7 @@ import React from "react";
 import Box from "@mui/material/Box";
 import Grid from "@mui/material/Grid";
 import bann from "../../../images/bann.jpg";
-import { Button, Typography } from "@mui/material";
+import { Typography } from "@mui/material";
 
 const bannerBg = {
   background: `url(${bann})`,
