@@ -1,0 +1,85 @@
+[
+  {
+    "id": 1,
+    "name": "GIANT",
+    "knownfor": "Road, Mountain, Hybrid",
+    "description": "Founded in 1972 in Taiwan it took nine years to release their first model. Giant has always been known for quick assessing market trends and improving them. It is one of largest high-end bike manufacturer in the world.  By 2010 they were winning awards for nearly every design they created and introduced Liv/Giant in 2011. Liv/Giant specializes in designs specifically built for women.",
+    "price": "$3,550.00",
+    "img": "https://i.ibb.co/MsnYrTb/EQl0g-VBXUAAx-BOH.jpg"
+  },
+  {
+    "id": 2,
+    "name": "Cannondale",
+    "knownfor": "Road, Mountain, Hybrid",
+    "description": "Cannondale got their start in 1973 by crafting and releasing bike accessories. They were the first company to introduce the Bugger, a bicycle trailer.They followed that up with a canvas bag that they produced in a loft above a pickle factory.  In 2004 they led the industry with the aggressive adoption of Carbon into their assemblies and their bikes continued to outperform. Cannondale is a company that is driven with an engineering mindset. Cannondale topstone is the most  popular bike from this brand.",
+    "price": "$5,550.00",
+    "img": "https://i.ibb.co/dcJf9Q3/7ca2c0d234b17116e308060a292dcae3.jpg"
+  },
+
+  {
+    "id": 3,
+    "name": "Trek Bikes",
+    "knownfor": " Road, Mountain",
+    "description": "Trek is the largest bicycle brand based in the US.The Trek 850, in 1983, was the first mountain bikes they ever released and it soon caught on that Trek was a name to remember. By the late 1990s they were building all ranges of bikes for all riders: children to athletes and everyone in between.By 2001 they had introduced electric-hybrid bikes for endurance riders and trainers. The Trek FX1 is the best hybrid fitness bike due to its popularity, reviews and sales.",
+    "price": "$4,550.00",
+    "img": "https://i.ibb.co/CMW1Xjn/fmioIs.jpg"
+  },
+
+  {
+    "id": 4,
+    "name": "Diamondback",
+    "knownfor": " BMX, Mountain Bike, Road Bikes, Hybrid",
+    "description": "Founded in 1977 as a California company, it was originally a BMX brand.  A major bicycle manufacturer based in Washington state, Diamondback Bicycle brands offers an array of models you can ride on the trails or the road for men, women, and children.It is the most popular and successful bicycle brands in the USA.One of the innovations pioneered by Diamondback is the Knuckle Box suspension, which is found on its Mountain Bikes.  In 1999 the company was purchased and later merged with Raleigh Bicycle company.",
+    "price": "$11,550.00",
+    "img": "https://i.ibb.co/1mhqWdb/Diamondback-Bike-gear-patrol-feature.jpg"
+  },
+  {
+    "id": 5,
+    "name": "Specialized Bikes",
+    "knownfor": "Road Bikes",
+    "description": "Specialized was founded in 1974 by Mike Sinyard. Based in California, the company initially focused on importing Italian parts and evolved to manufacturing their own. In 1981 Specialized released their first two models. Rivaling the biggest names in cycling world, Specialized was bought by Meridia Bikes (a 40 percent share) in 2001 and has relaunched with new efforts and even better designs.",
+    "price": "$7,550.00",
+    "img": "https://i.ibb.co/519j2k8/1074-LP-Specialized-Bikes-img-1-slim-C.jpg"
+  },
+  {
+    "id": 6,
+    "name": "Kona Bikes",
+    "knownfor": "Road Bikes, Mountain Bikes, Cyclrocross Bikes",
+    "description": "Kona is another known name in the bicycle industry. The company was established in 1988 by two friends in Vancouver and still has the same owners. The bikes of Kona are sold in more than 60 countries worldwide.It is the first company to build and produce the straight leg mountain bike fork. The bike has 10 different versions of the fork that have been made for mountain bikes and asphalt bikes.The bikes are known for their versatility, durability, and ability to handle difficult terrains. The Kona offers a bike for every person with a huge range of road, cyclocross, mountain, and commuter bikes.",
+    "price": "$3,550.00",
+    "img": "https://i.ibb.co/W0GWqbS/175363-largest-03-Mc-Namee.jpg"
+  },
+
+  {
+    "id": 7,
+    "name": "GT Bikes",
+    "knownfor": "BMX Bikes, Mountain Bikes",
+    "description": "These bicycles were established in 1979 in Santa Ana, California. GT Bikes have been around for more than 50 years and are known from the beginning of BMX bikes development with their triple triangles frame design. The company focuses on creating bikes that are reliable, durable, and have innovative frames.The company started to build their own mountain bikes after a huge success with BMX bike and now they manufacture different types of bikes. ",
+    "price": "$3,550.00",
+    "img": "https://i.ibb.co/ZX5H9t0/gt-bmx-bicycles-dave-voelker-dyno-4.jpg"
+  },
+  {
+    "id": 8,
+    "name": "Raleigh Bikes",
+    "knownfor": "Road, Mountain, Hybrid,Electric Bikes",
+    "description": "The Raleigh bike company is a British manufacturer and is established in Nottingham, England. It was founded by 1885 and has been in the business since then.It is one of the most experienced bicycle companies in the world however, it is one of the rare ones. The company has not comprised its high-quality products after being in the business for so long, making it their highest priority.The bikes are familiar with every bike type, including road, mountain, urban, electric bikes, adventure, and classic model bikes. ",
+    "price": "$3,550.00",
+    "img": "https://i.ibb.co/XzrPvCJ/11a9cad2596a8fc53f517f25c91f35b7.jpg"
+  },
+  {
+    "id": 9,
+    "name": "SANTA CRUZ BIKES",
+    "knownfor": "Mountain Bikes",
+    "description": "These bikes are built for top end riders that need a special bike. They have a rotating line up of high end mountain bikes and all are made from aluminum and carbon fiber.  Santa Cruz doesn’t offer any other type of bike except for mountain bikes. However, when it comes to the mountain, Santa Cruz delivers.",
+    "price": "$9,550.00",
+    "img": "https://i.ibb.co/zSwQq1y/wallpaper-scb-1.jpg"
+  },
+  {
+    "id": 10,
+    "name": "Marin Bikes",
+    "knownfor": "Mountain Bikes",
+    "description": "Marin bikes were born in California in 1986, founded on the base of cycling culture. The company is an American manufacturer that specializes in mountain bikes.The main motto of the company is to provide an unusual experience with every bike they build. The company's development continued after producing its hybrid and road bikes and full-suspension mountain bikes. Marin has been selling bikes for more than 30 years now. Additionally, with new exciting launches have lifted the brand's profile completely.",
+    "price": "$4,550.00",
+    "img": "https://i.ibb.co/CbJrJpM/Mountain-biking-tour-ecuador-Header-2.jpg"
+  }
+]
