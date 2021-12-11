@@ -8,8 +8,8 @@ import Login from "./Pages/Login/Login/Login";
 import Register from "./Pages/Login/Register/Register";
 import AuthProvider from "./contexts/AuthProvider/AuthProvider";
 import PrivateRoute from "./Pages/Login/PrivateRoute/PrivateRoute";
-import Purchase from "./Pages/Purchase/Purchase";
 import AddProduct from "./Pages/AddProduct/AddProduct";
+import Purchase from "./Pages/Purchase/Purchase/Purchase";
 
 function App() {
   return (
