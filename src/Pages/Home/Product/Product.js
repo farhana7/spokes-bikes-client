@@ -7,6 +7,9 @@ import CardMedia from "@mui/material/CardMedia";
 import Button from "@mui/material/Button";
 import Typography from "@mui/material/Typography";
 import { Link } from "react-router-dom";
+import { Box } from "@mui/material";
+import Header from "../../Shared/Header/Header";
+import Footer from "../../Shared/Footer/Footer";
 
 const Product = ({ product }) => {
   const { _id, name, knownfor, description, img, price } = product;

@@ -30,7 +30,7 @@ const useFirebase = () => {
         const newUser = { email, displayName: name };
         setUser(newUser);
         //save user to the database
-        // saveUser(email, name, "POST");
+        saveUser(email, name, "POST");
         //send name to firebase after creation
         updateProfile(auth.currentUser, {
           displayName: name,
@@ -65,9 +65,10 @@ const useFirebase = () => {
     signInWithPopup(auth, googleProvider)
       .then((result) => {
         setUser(result.user);
-        // saveUser(user.email, user.displayName, "PUT");
+        saveUser(user.email, user.displayName, "PUT");
         setAuthError("");
         const destination = location?.state?.from || "/purchase/:productId";
+        history.replace(destination);
       })
       .catch((error) => {
         setAuthError(error.message);
@@ -99,6 +100,17 @@ const useFirebase = () => {
         //An error happened.
       })
       .finally(() => setIsLoading(false));
+  };
+
+  const saveUser = (email, displayName, method) => {
+    const user = { email, displayName };
+    fetch("http://localhost:5000/users", {
+      method: method,
+      headers: {
+        "content-type": "application/json",
+      },
+      body: JSON.stringify(user),
+    });
   };
 
   return {

@@ -10,13 +10,18 @@ import AuthProvider from "./contexts/AuthProvider/AuthProvider";
 import PrivateRoute from "./Pages/Login/PrivateRoute/PrivateRoute";
 import AddProduct from "./Pages/AddProduct/AddProduct";
 import Purchase from "./Pages/Purchase/Purchase/Purchase";
+import Dashboard from "./Pages/Dashboard/Dashboard/Dashboard";
+import MyOrders from "./Pages/Dashboard/MyOrder/MyOrders";
+import ManageProducts from "./Pages/ManageProducts/ManageProducts";
+import Review from "./Pages/Dashboard/Review/Review";
+import Pay from "./Pages/Dashboard/Pay/Pay";
 
 function App() {
   return (
     <div className="App">
       <AuthProvider>
         <Router>
-          <Header></Header>
+          {/* <Header></Header> */}
           <Switch>
             <Route exact path="/">
               <Home />
@@ -40,12 +45,27 @@ function App() {
             <PrivateRoute path="/purchase/:productId">
               <Purchase></Purchase>
             </PrivateRoute>
+            <PrivateRoute path="/dashboard">
+              <Dashboard></Dashboard>
+            </PrivateRoute>
+            <PrivateRoute path="/myOrders">
+              <MyOrders></MyOrders>
+            </PrivateRoute>
+            <PrivateRoute path="/review">
+              <Review></Review>
+            </PrivateRoute>
+            <PrivateRoute path="/pay">
+              <Pay></Pay>
+            </PrivateRoute>
 
-            <Route path="/addAProduct">
+            <PrivateRoute path="/addAProduct">
               <AddProduct />
-            </Route>
+            </PrivateRoute>
+            <PrivateRoute path="/manageProducts">
+              <ManageProducts></ManageProducts>
+            </PrivateRoute>
           </Switch>
-          <Footer></Footer>
+          {/* <Footer></Footer> */}
         </Router>
       </AuthProvider>
     </div>

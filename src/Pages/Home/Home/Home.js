@@ -1,5 +1,6 @@
 import { Box, Container, Grid, Typography } from "@mui/material";
 import React, { useEffect, useState } from "react";
+import Footer from "../../Shared/Footer/Footer";
 import Header from "../../Shared/Header/Header";
 import About from "../About/About";
 import Banner from "../Banner/Banner";
@@ -16,7 +17,7 @@ const Home = () => {
 
   return (
     <Box>
-      {/* <Header></Header> */}
+      <Header></Header>
       <Banner></Banner>
       <Box>
         <Typography
@@ -44,6 +45,7 @@ const Home = () => {
         </Container>
       </Box>
       <About></About>
+      <Footer></Footer>
     </Box>
   );
 };
