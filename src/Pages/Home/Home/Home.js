@@ -1,5 +1,6 @@
 import { Box, Container, Grid, Typography } from "@mui/material";
 import React, { useEffect, useState } from "react";
+import Review from "../../Dashboard/Review/Review";
 import Footer from "../../Shared/Footer/Footer";
 import Header from "../../Shared/Header/Header";
 import About from "../About/About";
@@ -44,6 +45,7 @@ const Home = () => {
           </Grid>
         </Container>
       </Box>
+      <Review></Review>
       <About></About>
       <Footer></Footer>
     </Box>
