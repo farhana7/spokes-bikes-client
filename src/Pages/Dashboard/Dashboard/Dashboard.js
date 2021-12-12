@@ -33,6 +33,8 @@ import Review from "../Review/Review";
 import Pay from "../Pay/Pay";
 import ManageProducts from "../../ManageProducts/ManageProducts";
 import AddProduct from "../../AddProduct/AddProduct";
+import AdminRoute from "../../Login/Login/AdminRoute/AdminRoute";
+// import Box from "@mui/material/Box";
 
 const drawerWidth = 200;
 
@@ -42,6 +44,7 @@ function Dashboard(props) {
   const { user, logOut } = useAuth();
 
   let { path, url } = useRouteMatch();
+  const { admin } = useAuth();
   const handleDrawerToggle = () => {
     setMobileOpen(!mobileOpen);
   };
@@ -66,15 +69,19 @@ function Dashboard(props) {
       <NavLink to={`${url}`}>
         <Button color="inherit">Dashboard</Button>
       </NavLink>
-      <NavLink to={`${url}/makeAdmin`}>
-        <Button color="inherit">Make Admin</Button>
-      </NavLink>
-      <NavLink to={`${url}/addAProduct`}>
-        <Button color="inherit">Add Products</Button>
-      </NavLink>
-      <NavLink to={`${url}/manageProducts`}>
-        <Button color="inherit">Manage Products</Button>
-      </NavLink>
+      {admin && (
+        <Box>
+          <NavLink to={`${url}/makeAdmin`}>
+            <Button color="inherit">Make Admin</Button>
+          </NavLink>
+          <NavLink to={`${url}/addAProduct`}>
+            <Button color="inherit">Add Products</Button>
+          </NavLink>
+          <NavLink to={`${url}/manageProducts`}>
+            <Button color="inherit">Manage Products</Button>
+          </NavLink>
+        </Box>
+      )}
 
       <List>
         {["Inbox", "Starred", "Send email", "Drafts"].map((text, index) => (
@@ -167,15 +174,15 @@ function Dashboard(props) {
           <Route exact path={path}>
             <DashboardHome></DashboardHome>
           </Route>
-          <Route path={`${path}/makeAdmin`}>
+          <AdminRoute path={`${path}/makeAdmin`}>
             <MakeAdmin></MakeAdmin>
-          </Route>
-          <Route path={`${path}/addAProduct`}>
+          </AdminRoute>
+          <AdminRoute path={`${path}/addAProduct`}>
             <AddProduct></AddProduct>
-          </Route>
-          <Route path={`${path}/manageProducts`}>
+          </AdminRoute>
+          <AdminRoute path={`${path}/manageProducts`}>
             <ManageProducts></ManageProducts>
-          </Route>
+          </AdminRoute>
           <Route path={`${path}/myOrders`}>
             <MyOrders></MyOrders>
           </Route>
