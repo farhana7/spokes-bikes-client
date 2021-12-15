@@ -37,6 +37,7 @@ const Header = () => {
               mt: 1,
               fontStyle: "italic",
               textAlign: "left",
+              fontWeight: "bold",
               color: "#dc2f02",
               flexGrow: 1,
             }}
@@ -46,26 +47,46 @@ const Header = () => {
           <NavLink style={{ textDecoration: "none" }} to="/home">
             <Button
               sx={{
-                fontWeight: "bold",
+                // fontWeight: "bold",
+                fontSize: 20,
                 color: "#dc2f02",
               }}
             >
               Home
             </Button>
           </NavLink>
-          <NavLink to="/addAProduct">
+          {/* <NavLink to="/addAProduct">
             <Button>Add A Product</Button>
-          </NavLink>
+          </NavLink> */}
 
           {user?.email ? (
             <Box>
               <NavLink
-                style={{ textDecoration: "none", color: "white" }}
+                style={{
+                  textDecoration: "none",
+                  color: "white",
+                }}
                 to="/dashboard"
               >
-                <Button color="inherit">Dashboard</Button>
+                <Button
+                  sx={{
+                    // fontWeight: "bold",
+                    fontSize: 20,
+                    color: "#dc2f02",
+                  }}
+                  color="inherit"
+                >
+                  Dashboard
+                </Button>
               </NavLink>
-              <Button onClick={logOut} color="inherit">
+              <Button
+                sx={{
+                  // fontWeight: "bold",
+                  fontSize: 17,
+                }}
+                onClick={logOut}
+                color="inherit"
+              >
                 Logout
               </Button>
             </Box>
@@ -74,7 +95,15 @@ const Header = () => {
               style={{ textDecoration: "none", color: "white" }}
               to="/login"
             >
-              <Button color="inherit">Login</Button>
+              <Button
+                sx={{
+                  // fontWeight: "bold",
+                  fontSize: 17,
+                }}
+                color="inherit"
+              >
+                Login
+              </Button>
             </NavLink>
           )}
           <>
@@ -88,7 +117,14 @@ const Header = () => {
           </>
 
           <NavLink style={{ textDecoration: "none" }} to="/products">
-            <Button variant="contained" style={{ backgroundColor: "#2a9d8f" }}>
+            <Button
+              variant="contained"
+              sx={{
+                // fontWeight: "bold",
+                fontSize: 17,
+                backgroundColor: "#2a9d8f",
+              }}
+            >
               Explore
             </Button>
           </NavLink>

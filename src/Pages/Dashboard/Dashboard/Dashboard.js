@@ -53,37 +53,101 @@ function Dashboard(props) {
     <div>
       <Toolbar />
       <Divider />
-      <Button onClick={logOut} color="inherit">
+      <Button
+        sx={{
+          fontWeight: "bold",
+          color: "#dc2f02",
+        }}
+        onClick={logOut}
+        color="inherit"
+      >
         Logout
       </Button>
-
-      <NavLink to={`${url}/myOrders`}>
-        <Button color="inherit">My Orders</Button>
-      </NavLink>
-      <NavLink to={`${url}/review`}>
-        <Button color="inherit">Review</Button>
-      </NavLink>
-      <NavLink to={`${url}/pay`}>
-        <Button color="inherit">Pay</Button>
-      </NavLink>
+      <Box>
+        <NavLink to={`${url}/myOrders`}>
+          <Button
+            sx={{
+              fontWeight: "bold",
+              color: "green",
+            }}
+            color="inherit"
+          >
+            My Orders
+          </Button>
+        </NavLink>
+        <NavLink to={`${url}/review`}>
+          <Button
+            sx={{
+              fontWeight: "bold",
+              color: "green",
+            }}
+            color="inherit"
+          >
+            Review
+          </Button>
+        </NavLink>
+        <NavLink to={`${url}/pay`}>
+          <Button
+            sx={{
+              fontWeight: "bold",
+              color: "green",
+            }}
+            color="inherit"
+          >
+            Pay
+          </Button>
+        </NavLink>
+      </Box>
       <NavLink to={`${url}`}>
-        <Button color="inherit">Dashboard</Button>
+        <Button
+          sx={{
+            fontWeight: "bold",
+            color: "#dc2f02",
+          }}
+          color="inherit"
+        >
+          Dashboard
+        </Button>
       </NavLink>
       {admin && (
         <Box>
           <NavLink to={`${url}/makeAdmin`}>
-            <Button color="inherit">Make Admin</Button>
+            <Button
+              sx={{
+                fontWeight: "bold",
+                color: "#dc2f02",
+              }}
+              color="inherit"
+            >
+              Make Admin
+            </Button>
           </NavLink>
           <NavLink to={`${url}/addAProduct`}>
-            <Button color="inherit">Add Products</Button>
+            <Button
+              sx={{
+                fontWeight: "bold",
+                color: "#dc2f02",
+              }}
+              color="inherit"
+            >
+              Add Products
+            </Button>
           </NavLink>
           <NavLink to={`${url}/manageProducts`}>
-            <Button color="inherit">Manage Products</Button>
+            <Button
+              sx={{
+                fontWeight: "bold",
+                color: "#dc2f02",
+              }}
+              color="inherit"
+            >
+              Manage Products
+            </Button>
           </NavLink>
         </Box>
       )}
 
-      <List>
+      {/* <List>
         {["Inbox", "Starred", "Send email", "Drafts"].map((text, index) => (
           <ListItem button key={text}>
             <ListItemIcon>
@@ -92,7 +156,7 @@ function Dashboard(props) {
             <ListItemText primary={text} />
           </ListItem>
         ))}
-      </List>
+      </List> */}
     </div>
   );
 
@@ -109,7 +173,7 @@ function Dashboard(props) {
           ml: { sm: `${drawerWidth}px` },
         }}
       >
-        <Toolbar>
+        <Toolbar style={{ backgroundColor: "#264653" }}>
           <IconButton
             color="inherit"
             aria-label="open drawer"
@@ -119,7 +183,7 @@ function Dashboard(props) {
           >
             <MenuIcon />
           </IconButton>
-          <Typography variant="h6" noWrap component="div">
+          <Typography variant="h6" sx={{ fontSize: 31 }} noWrap component="div">
             Dashboard
           </Typography>
         </Toolbar>

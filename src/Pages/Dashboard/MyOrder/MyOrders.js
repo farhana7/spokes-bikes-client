@@ -8,7 +8,7 @@ import TableContainer from "@mui/material/TableContainer";
 import TableHead from "@mui/material/TableHead";
 import TableRow from "@mui/material/TableRow";
 import Paper from "@mui/material/Paper";
-import { Button } from "@mui/material";
+import { Button, Typography } from "@mui/material";
 import Product from "../../Home/Product/Product";
 import { Box } from "@mui/system";
 import { NavLink } from "react-router-dom";
@@ -26,24 +26,41 @@ const MyOrders = () => {
   }, []);
 
   const handleDelete = (id) => {
-    const url = `http://localhost:5000/purchases?email=${id}`;
-    fetch(url, {
+    fetch(`http://localhost:5000/deleteOrder/${id}`, {
       method: "DELETE",
     })
       .then((res) => res.json())
-      .then((data) => {
-        console.log(data);
-        if (data.deletedCount) {
-          alert("Are you sure you want to delete ?");
-          const remaining = products.filter((product) => product._id !== id);
-          setProducts(remaining);
-        }
-      });
+      .then((data) => console.log(data));
+    // const url = `http://localhost:5000/purchases?email=${id}`;
+    // fetch(url, {
+    //   method: "DELETE",
+    // })
+    //   .then((res) => res.json())
+    //   .then((data) => {
+    //     console.log(id);
+    //     if (data.deletedCount) {
+    //       alert("Are you sure you want to delete ?");
+    //       const remaining = products.filter((product) => product._id !== id);
+    //       setProducts(remaining);
+    //     }
+    //   });
   };
 
   return (
-    <div>
-      <h2>My Orders : {orders.length}</h2>
+    <Box>
+      <Typography
+        variant="h2"
+        sx={{
+          mt: 5,
+          mb: 5,
+          fontStyle: "italic",
+          color: "#dc2f02",
+          fontWeight: "bold",
+        }}
+      >
+        My Orders
+      </Typography>
+
       <NavLink style={{ textDecoration: "none" }} to="/home">
         <Button
           variant="contained"
@@ -52,6 +69,7 @@ const MyOrders = () => {
           Go Home
         </Button>
       </NavLink>
+      <h2>My Orders : {orders.length}</h2>
       <TableContainer component={Paper}>
         <Table sx={{ minWidth: 650 }} aria-label="Order table">
           <TableHead>
@@ -88,7 +106,10 @@ const MyOrders = () => {
                       {product.name}
                     </h3> */}
 
-                <Button variant="contained" onClick={() => handleDelete}>
+                <Button
+                  onClick={() => handleDelete(products?._id)}
+                  variant="contained"
+                >
                   Delete
                 </Button>
                 {/* </Box>
@@ -98,7 +119,7 @@ const MyOrders = () => {
           </TableBody>
         </Table>
       </TableContainer>
-    </div>
+    </Box>
   );
 };
 

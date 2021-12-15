@@ -8,7 +8,12 @@ import { Button } from "@mui/material";
 const DashboardHome = () => {
   return (
     <Box>
-      <Typography paragraph>Content here</Typography>
+      <Typography
+        sx={{ fontSize: 31, color: "gray", fontStyle: "italic" }}
+        paragraph
+      >
+        Content here
+      </Typography>
       <NavLink style={{ textDecoration: "none" }} to="/home">
         <Button
           variant="contained"
@@ -18,9 +23,7 @@ const DashboardHome = () => {
         </Button>
       </NavLink>
 
-      <Typography paragraph>
-        <MyOrders></MyOrders>
-      </Typography>
+      <Typography paragraph>{/* <MyOrders></MyOrders> */}</Typography>
     </Box>
   );
 };

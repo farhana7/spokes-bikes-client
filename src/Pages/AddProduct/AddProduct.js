@@ -1,4 +1,4 @@
-import { Box } from "@mui/material";
+import { Box, Typography } from "@mui/material";
 import axios from "axios";
 import React from "react";
 import { useForm } from "react-hook-form";
@@ -26,6 +26,18 @@ const AddProduct = () => {
   return (
     <Box>
       <Header></Header>
+      <Typography
+        variant="h2"
+        sx={{
+          mt: 5,
+          mb: 5,
+          fontStyle: "italic",
+          color: "#dc2f02",
+          fontWeight: "bold",
+        }}
+      >
+        Add Products
+      </Typography>
       <div className="add-product">
         <h2 style={{ fontSize: 37, marginTop: 53 }}>Please Add a Product</h2>
         <form onSubmit={handleSubmit(onSubmit)}>
